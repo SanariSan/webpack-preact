@@ -1,0 +1,14 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "browsers": "defaults" // Or define custom browser support like "> 0.25%, not dead"
+        },
+        "useBuiltIns": "entry", // polyfilling
+        "corejs": 3
+      }
+    ]
+  ]
+}

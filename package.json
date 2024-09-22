@@ -1,0 +1,46 @@
+{
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack serve --env development --open --hot",
+    "build": "cross-env NODE_ENV=production yarn lint && tsc --noEmit && yarn rimraf ./dist && webpack --env production",
+    "---additional": "---------------------------------------------------------------",
+    "format": "node ./node_modules/prettier/bin-prettier.js -w --config ./.prettierrc .",
+    "lint": "node ./node_modules/.bin/eslint --ext .ts,.tsx,.js,.jsx ./src",
+    "lint-quiet": "node ./node_modules/.bin/eslint --quiet --ext .ts,.tsx,.js,.jsx ./src",
+    "lint-fix": "node ./node_modules/.bin/eslint --fix --ext .ts,.tsx,.js,.jsx ./src"
+  },
+  "dependencies": {
+    "preact": "^10.22.1",
+    "preact-iso": "^2.6.3",
+    "preact-render-to-string": "^6.4.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.35.1",
+    "@typescript-eslint/parser": "^5.35.1",
+    "cross-env": "^7.0.3",
+    "css-loader": "<7.0.0",
+    "esbuild": "^0.23.1",
+    "esbuild-loader": "^4.2.2",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-airbnb-typescript": "^14.0.1",
+    "eslint-config-preact": "^1.5.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-node": "^0.3.6",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^5.1.1",
+    "html-webpack-plugin": "^5.6.0",
+    "prettier": "^2.7.1",
+    "sass": "^1.79.3",
+    "sass-loader": "^16.0.2",
+    "style-loader": "^4.0.0",
+    "typescript": "<=5.2.0",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
+  }
+}
