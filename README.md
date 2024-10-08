@@ -86,4 +86,4 @@ The final package list could look like:
   }
 ```
 
-This results in a development environment of about ~50 MiB, with little left to remove except possibly TypeScript. This enlightened setup is presented here - >todo<
+This results in a development environment of about ~50 MiB, with little left to remove except possibly TypeScript. This enlightened setup is presented here - https://github.com/SanariSan/esbuild-preact
